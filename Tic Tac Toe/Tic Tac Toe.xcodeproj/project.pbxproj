@@ -11,6 +11,7 @@
 		B1CDA72B19A40649007DAACF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B1CDA72A19A40649007DAACF /* main.m */; };
 		B1CDA72F19A40649007DAACF /* Tic_Tac_Toe.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = B1CDA72E19A40649007DAACF /* Tic_Tac_Toe.1 */; };
 		B1CDA73719A50AD8007DAACF /* TicTacToeGame.m in Sources */ = {isa = PBXBuildFile; fileRef = B1CDA73619A50AD8007DAACF /* TicTacToeGame.m */; };
+		B1CDA73A19A54B86007DAACF /* TicTacToeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B1CDA73919A54B86007DAACF /* TicTacToeCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -34,6 +35,8 @@
 		B1CDA72E19A40649007DAACF /* Tic_Tac_Toe.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = Tic_Tac_Toe.1; sourceTree = "<group>"; };
 		B1CDA73519A50AD8007DAACF /* TicTacToeGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TicTacToeGame.h; sourceTree = "<group>"; };
 		B1CDA73619A50AD8007DAACF /* TicTacToeGame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TicTacToeGame.m; sourceTree = "<group>"; };
+		B1CDA73819A54B86007DAACF /* TicTacToeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TicTacToeCell.h; sourceTree = "<group>"; };
+		B1CDA73919A54B86007DAACF /* TicTacToeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TicTacToeCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +80,8 @@
 			isa = PBXGroup;
 			children = (
 				B1CDA72A19A40649007DAACF /* main.m */,
+				B1CDA73819A54B86007DAACF /* TicTacToeCell.h */,
+				B1CDA73919A54B86007DAACF /* TicTacToeCell.m */,
 				B1CDA73519A50AD8007DAACF /* TicTacToeGame.h */,
 				B1CDA73619A50AD8007DAACF /* TicTacToeGame.m */,
 				B1CDA72E19A40649007DAACF /* Tic_Tac_Toe.1 */,
@@ -144,6 +149,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B1CDA73719A50AD8007DAACF /* TicTacToeGame.m in Sources */,
+				B1CDA73A19A54B86007DAACF /* TicTacToeCell.m in Sources */,
 				B1CDA72B19A40649007DAACF /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

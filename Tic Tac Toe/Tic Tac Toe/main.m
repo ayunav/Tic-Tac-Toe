@@ -14,7 +14,6 @@ int main(int argc, const char * argv[])
 
     @autoreleasepool {
         
-        NSLog(@"Hello, World!");
         TicTacToeGame *myGame = [[TicTacToeGame alloc] init];
         [myGame displayBoard];
         

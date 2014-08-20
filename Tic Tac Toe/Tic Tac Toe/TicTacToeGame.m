@@ -7,10 +7,11 @@
 //
 
 #import "TicTacToeGame.h"
+#import "TicTacToeCell.h"
 
 @interface TicTacToeGame ()
 {
-    BOOL gameBoard[3][3];
+    TicTacToeCell *gameBoard[3][3];
 }
 @end
 
@@ -22,7 +23,9 @@
     if (self) {
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 3; j++) {
-                gameBoard[i][j] = NO;
+                //initialize each cell
+                TicTacToeCell *newCell = [[TicTacToeCell alloc]init];
+                gameBoard[i][j] = newCell;
             }
         }
     }
@@ -33,16 +36,11 @@
 - (void)displayBoard
 {
     NSString *grid = [[NSString alloc] init];
-    
+
     for (int i = 0; i < 3; i++) {
         for (int j = 0; j < 3; j++) {
-            if (gameBoard[j][i] == YES) {
-                grid = [grid stringByAppendingString:@"X"];
-            }
-            else
-            {
-                grid = [grid stringByAppendingString:@"O"];
-            }
+            grid = [grid stringByAppendingFormat:@"%@", [gameBoard[i][j] value]];
+//            grid = [grid stringByAppendingString:@" | "];
         }
         grid = [grid stringByAppendingString:@"\n"];
     }
