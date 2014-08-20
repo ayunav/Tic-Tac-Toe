@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "TicTacToeGame.h"
 
 int main(int argc, const char * argv[])
 {
@@ -14,7 +15,9 @@ int main(int argc, const char * argv[])
     @autoreleasepool {
         
         // insert code here...
-        NSLog(@"Hello, World!");
+//        NSLog(@"Hello, World!");
+        TicTacToeGame *myGame = [[TicTacToeGame alloc] init];
+        [myGame displayBoard];
         
     }
     return 0;

@@ -30,4 +30,19 @@
     return self;
 }
 
+- (void)displayBoard
+{
+    for (int i = 0; i < 3; i++) {
+        for (int j = 0; j < 3; j++) {
+            if (gameBoard[i][j] == YES) {
+                NSLog(@"1");
+            }
+            else
+            {
+                NSLog(@"0");
+            }
+        }
+    }
+}
+
 @end

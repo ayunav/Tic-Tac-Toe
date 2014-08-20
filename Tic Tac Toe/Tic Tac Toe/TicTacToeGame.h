@@ -10,4 +10,7 @@
 
 @interface TicTacToeGame : NSObject
 
+- (instancetype)init;
+- (void)displayBoard;
+
 @end
