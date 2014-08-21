@@ -156,14 +156,4 @@
     return column - 1;
 }
 
-- (NSString *)convertPlayerNumberToSymbol:(int)playerNumber
-{
-    if (playerNumber == 1) {
-        return @"X";
-    }
-    else {
-        return @"O";
-    }
-}
-
 @end
