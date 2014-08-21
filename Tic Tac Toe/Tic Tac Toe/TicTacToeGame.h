@@ -13,4 +13,6 @@
 - (void)displayBoard;
 - (void)playGame;
 - (int)getRowforPlayerNumber:(int)playerNumber;
+//- (BOOL)checkRow:(int)number;
+//- (BOOL)checkColumn:(int)number;
 @end

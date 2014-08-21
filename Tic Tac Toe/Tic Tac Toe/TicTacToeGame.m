@@ -48,12 +48,18 @@
     NSLog(@"\n%@", grid);
 }
 
-//- (BOOL)gameWon
-//{
-//    
-//}
+//returns YES if game is won
+- (BOOL)gameWon
+{
+    BOOL gameWon = NO;
+    for (int i = 0; i < 3; i++) {
+        gameWon = (gameWon || [self checkRow:1] || [self checkColumn:1]);
+    }
+    return gameWon;
+}
 
 //private function used to check for win condition one row at a time
+//returns YES if game is won from matching rows
 - (BOOL)checkRow:(int)number
 {
     
@@ -69,20 +75,50 @@
 
     return YES;
 }
-//private function used to check for win condition one column at a time
-//- (BOOL)checkColumn:(int)number
-//{
-//    
-//}
 
-//- (void)playGame
-//{
-//
-//    while (!self.gameWon) {
-//        <#statements#>
-//    }
-//
-//}
+//private function used to check for win condition one column at a time
+//returns YES if game is won from matching column
+- (BOOL)checkColumn:(int)number
+{
+    if (!gameBoard[0][number].isOccupied) {
+        return NO;
+    }
+    else {
+        if (gameBoard[0][number].value != gameBoard[1][number].value || gameBoard[1][number].value != gameBoard[2][number].value) {
+            return NO;
+        }
+    }
+    
+    return YES;
+}
+
+- (void)playGame
+{
+    int playerNumber = 1;
+    while (![self gameWon]) {
+        //loop back from player 2 to player 1
+        if (playerNumber == 3) {
+            playerNumber = 1;
+        }
+        
+        int row;
+        row = [self getRowforPlayerNumber:playerNumber];
+        
+        int column;
+        column = [self getColumnforPlayerNumber:playerNumber];
+        
+        if (gameBoard[row][column].isOccupied) {
+            NSLog(@"Error, there is already an %@ placed there", gameBoard[row][column].value);
+        }
+        else {
+            [self setCellValueForRow:row forColumn:column forPlayerNumber:playerNumber];
+            playerNumber ++;
+        }
+        
+        [self displayBoard];
+    }
+
+}
 
 - (void)setCellValueForRow:(int)row forColumn:(int)column forPlayerNumber:(int)playerNumber
 {
@@ -128,4 +164,5 @@
         return @"O";
     }
 }
+
 @end
