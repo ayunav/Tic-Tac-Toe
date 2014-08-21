@@ -53,8 +53,10 @@
 {
     BOOL gameWon = NO;
     for (int i = 0; i < 3; i++) {
-        gameWon = (gameWon || [self checkRow:1] || [self checkColumn:1]);
+//        NSLog(@"checkColumn is returning: %d", [self checkColumn:i]);
+        gameWon = (gameWon || [self checkRow:i] || [self checkColumn:i] || [self checkDiagonal]);
     }
+    NSLog(@"gameWon is returning: %d", gameWon);
     return gameWon;
 }
 
@@ -92,6 +94,25 @@
     return YES;
 }
 
+//private function used to check for win condition for diagonals
+//returns YES if game is won from matching diagonals
+- (BOOL)checkDiagonal
+{
+    BOOL gameWon;
+    
+    //if center square isn't occupied, win condition by diagonal cannot be possible
+    if (!gameBoard[1][1].isOccupied) {
+        gameWon = NO;
+    }
+    else if (gameBoard[1][1].value == gameBoard[0][0].value && gameBoard[1][1].value == gameBoard[2][2].value) {
+        gameWon = YES;
+    }
+    else if (gameBoard[1][1].value == gameBoard[0][2].value && gameBoard[1][1].value == gameBoard[2][0].value) {
+        gameWon = YES;
+    }
+    return gameWon;
+}
+
 - (void)playGame
 {
     int playerNumber = 1;
@@ -114,7 +135,7 @@
             [self setCellValueForRow:row forColumn:column forPlayerNumber:playerNumber];
             playerNumber ++;
         }
-        
+        NSLog(@"Game over!");
         [self displayBoard];
     }
 
