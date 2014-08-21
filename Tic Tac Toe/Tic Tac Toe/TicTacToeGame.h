@@ -11,5 +11,6 @@
 @interface TicTacToeGame : NSObject
 
 - (void)displayBoard;
-
+- (void)playGame;
+- (int)getRowforPlayerNumber:(int)playerNumber;
 @end

@@ -16,7 +16,9 @@ int main(int argc, const char * argv[])
         
         TicTacToeGame *myGame = [[TicTacToeGame alloc] init];
         [myGame displayBoard];
-        
+//        [myGame playGame];
+        [myGame getRowforPlayerNumber:1];
+
     }
     return 0;
 }
