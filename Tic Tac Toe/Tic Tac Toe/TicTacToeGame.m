@@ -136,8 +136,9 @@
     
     int row;
     row = [userInput intValue];
-//    NSLog(@"Player entered: %d", row);
-    return row;
+    
+    //returns row - 1 because humans start from 1;
+    return row - 1;
 }
 
 - (int)getColumnforPlayerNumber:(int)playerNumber
@@ -151,8 +152,8 @@
     
     int column;
     column = [userInput intValue];
-//    NSLog(@"Player entered: %d", column);
-    return column;
+    //returns column - 1 because humans start from 1;
+    return column - 1;
 }
 
 - (NSString *)convertPlayerNumberToSymbol:(int)playerNumber
