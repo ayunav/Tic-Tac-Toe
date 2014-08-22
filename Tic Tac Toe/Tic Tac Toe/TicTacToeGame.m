@@ -170,7 +170,7 @@
     int row;
     row = [userInput intValue];
     
-    //returns row - 1 because humans start from 1;
+        //returns row - 1 because humans start from 1;
     return row - 1;
 }
 
@@ -187,7 +187,7 @@
     int column;
     column = [userInput intValue];
     
-    //returns column - 1 because humans start from 1;
+        //returns column - 1 because humans start from 1;
     return column - 1;
 }
 
