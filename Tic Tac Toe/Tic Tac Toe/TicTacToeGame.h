@@ -10,9 +10,7 @@
 
 @interface TicTacToeGame : NSObject
 
-- (void)displayBoard;
+    //starts a game of tic tac toe for 2 players
 - (void)playGame;
-- (int)getRowforPlayerNumber:(int)playerNumber;
-//- (BOOL)checkRow:(int)number;
-//- (BOOL)checkColumn:(int)number;
+
 @end

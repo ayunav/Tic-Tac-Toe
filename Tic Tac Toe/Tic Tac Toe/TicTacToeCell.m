@@ -22,7 +22,6 @@
 
 - (void)clearCell
 {
-    NSLog(@"clearCell being called");
     self.value = @"-";
     self.isOccupied = NO;
 }
